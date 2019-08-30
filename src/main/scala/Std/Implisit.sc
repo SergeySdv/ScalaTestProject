@@ -6,7 +6,7 @@ import javax.swing.JButton
 // without implicit
 val button = new JButton
 button.addActionListener(
-  (actionEvent: ActionEvent) => {
+  (_: ActionEvent) => {
     println("pressed!")
   }
 )
