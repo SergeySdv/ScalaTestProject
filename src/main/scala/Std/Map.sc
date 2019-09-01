@@ -31,3 +31,18 @@ val mapValues2 = myMap6.values
 mapValues2.size
 myMap6("MI")
 
+// If a nonexistent map key is requested using myMap(missingKey),
+// a NoSuchElementException will be thrown.
+// Default values may be provided using either getOrElse or withDefaultValue
+// for the entire map:
+
+//val myMap7 =
+//  Map("MI" -> "Michigan", "OH" -> "Ohio", "WI" -> "Wisconsin", "IA" -> "Iowa")
+//intercept[NoSuchElementException] {
+//  myMap7("TX")
+}
+myMap.getOrElse("TX", "missing data")
+
+val myMap8 = Map("MI" -> "Michigan", "OH" -> "Ohio",
+  "WI" -> "Wisconsin", "IA" -> "Iowa") withDefaultValue "missing data"
+myMap8("TX")
