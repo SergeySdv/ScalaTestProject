@@ -18,3 +18,20 @@ someNumbers.filter(_ > 0)
 
 val f = (_: Int) + (_: Int)
 f(20, 80)
+
+@scala.annotation.tailrec
+def loop(x: Int, acc: Int = 1): Int = {
+ if (x <= 1) acc
+ else loop(x - 1, x * acc)
+}
+
+loop(10)
+
+def factorial(n: Int): Int = {
+ if (n == 0)
+  1
+ else
+  n * factorial(n-1)
+}
+
+factorial(10)
