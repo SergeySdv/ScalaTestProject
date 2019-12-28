@@ -11,7 +11,8 @@ def fib2 (n: Long) = fibIter(1, 0 , n)
 fib2(90)
 
 def sumItegers(a: Int, b: Int): Int =
- if(a > b) 0 else a + sumItegers(a + 1, b)
+ if(a > b) 0
+ else a + sumItegers(a + 1, b)
 
 sumItegers(10, 20)
 
