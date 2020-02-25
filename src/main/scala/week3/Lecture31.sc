@@ -61,6 +61,7 @@ object intsets{
   val t3 = t2 incl 2
 
 }
+
 println(intsets.t1.toString)
 println(intsets.t2.toString)
 println(intsets.t3.toString)

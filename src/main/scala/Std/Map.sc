@@ -40,7 +40,8 @@ myMap6("MI")
 //  Map("MI" -> "Michigan", "OH" -> "Ohio", "WI" -> "Wisconsin", "IA" -> "Iowa")
 //intercept[NoSuchElementException] {
 //  myMap7("TX")
-}
+//}
+
 myMap.getOrElse("TX", "missing data")
 
 val myMap8 = Map("MI" -> "Michigan", "OH" -> "Ohio",

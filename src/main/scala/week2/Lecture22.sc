@@ -1,7 +1,9 @@
+import scala.annotation.tailrec
 
 def name: String = System.getProperty("user.name")
 println("Hello, " + name + "!")
 
+@tailrec
 def fibIter (a: Long, b: Long, count: Long): Long ={
  if(count == 0 ) b else fibIter(a + b, a, count - 1)
 }
@@ -54,6 +56,7 @@ sumCubesAnonymous(1, 5)
 // Sum Tail style
 
 def sumTail(f: Int => Int, a: Int, b: Int): Int = {
+  @tailrec
   def loop(a: Int, acc: Int): Int = {
     if(a > b) acc
     else loop(a + 1, f(a) + acc)
@@ -107,4 +110,3 @@ product(x => x * x)(3, 4)
 def factorial(n: Int) = product(x => x)(1, n)
 
 factorial(10)
-
